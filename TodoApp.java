@@ -15,8 +15,8 @@ public class TodoApp {
     }
 
     public void danhdauSach(int vitri){
-        if(vitri >= 0 && vitri < danhsach.size()){
-            Book sach = danhsach.get(vitri);
+        if(vitri >= 0 && vitri <= danhsach.size()){
+            Book sach = danhsach.get(vitri-1);
             sach.danhdauSach();
             System.out.println("Sach: " + sach.getTensach() + " da duoc danh dau");
         }
@@ -26,8 +26,8 @@ public class TodoApp {
     }
 
     public void xoaSach(int vitri){
-        if(vitri >= 0 && vitri < danhsach.size()){
-            Book sach = danhsach.remove(vitri);
+        if(vitri >= 0 && vitri <= danhsach.size()){
+            Book sach = danhsach.remove(vitri-1);
             System.out.println("Sach: " + sach.getTensach() + " da duoc xoa");
         }
     }
